@@ -16,4 +16,4 @@ Methodolody: Agile Method
 
 Project Tracking: Trello
 
-Risks: Not very experienced with 
+Risks:  
