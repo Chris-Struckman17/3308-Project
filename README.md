@@ -1,4 +1,4 @@
-Who: John Welch (Jinjirow),Chris Struckman(Chris-Struckman17)
+Who: John Welch (Jinjirow),Chris Struckman(Chris-Struckman17), Victoria Velasquez (torivelasquez)
 
 Title: Final Project
 
