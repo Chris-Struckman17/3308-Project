@@ -22,7 +22,7 @@ Methodolody: Agile Method
 Project Tracking: Trello (Link: https://trello.com/invite/b/tetDicAg/c1ab5c035a47bbcb0999261645111938/3308-project)
 
 
-Risks: Not much experience writing software with these Javascript, CSS or HTTP. but we're definitely learning. 
+Risks: Not much experience writing software with Javascript, CSS or HTTP. but we're definitely learning. 
 
 Project Plan: https://trello.com/b/tetDicAg/3308-project
 
