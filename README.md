@@ -1,6 +1,6 @@
 Who: John Welch (Jinjirow),Chris Struckman(Chris-Struckman17), Victoria Velasquez (torivelasquez), Zach Brimlow (zbrimlow)
 
-Title: SoundStorm
+Title: SoundStorm (name pending)
 
 Description: A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). 
 
