@@ -43,3 +43,12 @@ Risks: Not much experience writing software with these Javascript, CSS or HTTP. 
 Project Plan: 
 
 
+
+How to load the Extension:
+
+1.) Go to the chrome extensions page and check the developer mode box. 
+you can visit this page by simply typing chrome://extensions/ in the url.
+2.) Click on "load unpacked extension" and load the Test Directory folder
+3.) The extension should show up on the page and a little "hello" icon will appear on the top right of the screen. right now all it does is create a popup when you click on it. 
+
+
