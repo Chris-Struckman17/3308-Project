@@ -1,20 +1,20 @@
 Who: John Welch (Jinjirow),Chris Struckman(Chris-Struckman17), Victoria Velasquez (torivelasquez), Zach Brimlow (zbrimlow)
 
-<<<<<<< HEAD
+
 Title: SoundStorm
 
 Description (Some of our ideas): A simple game. (looked at the monopoly code, didn't look too bad to program actually.) Some sort of iphone app (If we wanted to go down that road)[iphone app, swift language]. Some sort of audio application, plays music and other cool stuff (I sort of know how to program those as of now using JUCE) [c++], A webpage that takes an audio file and plays it along with visuals that repsond to the frequency of the sound.
 A simple, mp3 player application with audio filters and visualizer capabilities. A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). 
 
 Vision Statement: "Music Made Better" Our extention is a modification of the Soundcloud api that makes listening to music easier. Queuing songs is now possible to form temporary playlists with ease. Local files are now playable from soundcloud. 
- As a music enthusiast I want complete control of my songs so that I can optomize my audio listening experience.
+ As a music enthusiast I want complete control of my songs so that I can optimize my audio listening experience.
 =======
 Title: SoundStorm (name pending)
 
 Description: A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). 
 
 Vision Statement: "Music Made Better" Our extension is a modification of the Soundcloud api that makes listening to music easier and more enjoyable. Queuing songs is now possible to form temporary playlists with ease. Local files are now made acessible and can be put in playlists with streamed music.
->>>>>>> ecb7ecca20d212073f0bf04938dbfc3e9b18066c
+
 
 Motivation: To gain experience working with/modifying existing web programs and creating our own chrome extensions using Java, CSS, and HTML. 
 
@@ -37,10 +37,9 @@ Risks: Not much experience writing software with Javascript, CSS or HTTP. but we
 Project Plan: https://trello.com/b/tetDicAg/3308-project
 
 
-<<<<<<< HEAD
+
 Risks: Not much experience writing software with these Javascript, CSS or HTTP. but we're definitely learning. 
 
 Project Plan: 
 
-=======
->>>>>>> ecb7ecca20d212073f0bf04938dbfc3e9b18066c
+
