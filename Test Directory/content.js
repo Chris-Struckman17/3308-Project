@@ -1,1 +1,0 @@
-alert("Welcome to the new and improved Soundcloud!")
