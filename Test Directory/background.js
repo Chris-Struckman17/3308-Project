@@ -1,8 +1,11 @@
 //background.js
+chrome.contextMenus.create({
+	title: "Queue Song",
+	contexts:["link"],
+	onclick: myFunction
 
-chrome.browserAction.onClicked.addListener(function(tab)){
-	chrome.tabs.query({active: true, currentWindow: true},){
-		var activeTab = tabs[0];
-		chrome.tabs.sendMessage(activeTab.id, {"message": "clicked_browser_action"});	
-	});
 });
+
+function myFunction() {
+	alert("Added song to Queue!");
+}

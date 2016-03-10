@@ -7,9 +7,15 @@ body {
 			background-color: black;
 		}
 .popupContainerDiv {
+<<<<<<< HEAD
+			width: 100px;
+			min-height: 100px;
+			max-height: 400px;
+=======
 			width: 500px;
 			min-height: 250px;
 			max-height: 750px;
+>>>>>>> 88561a21ec7fc1897950e87e90443138833bf72a
 		}
 h1{
 	color:#ff3a00;
@@ -38,7 +44,7 @@ h3{
    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
    text-shadow: #6590ab 0 1px 0;
    color: #00000b;
-   font-size: 16px;
+   font-size: 10px;
    font-family: helvetica, serif;
    text-decoration: none;
    vertical-align: middle;
@@ -71,5 +77,12 @@ img{
 	border: 2px solid black;
 	vertical-align: center;
 	height: 150px;
+<<<<<<< HEAD
+	width: 200px;
+   }
+
+
+=======
 	width: auto;
 }
+>>>>>>> 88561a21ec7fc1897950e87e90443138833bf72a

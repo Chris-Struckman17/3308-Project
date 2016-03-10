@@ -1,19 +1,21 @@
 {
 
-	"name": "test extension 1",
+	"name": "SoundCloud Enhancement Suite",
 	"version": "0.1.1",
 	"manifest_version": 2,
-	"description": "this is a test",
+	"description": "Adds a couple much needed features to the SoundCloud website",
+	"web_accessible_resources": [
+		"toolbar.html"
+	],
 	"content_scripts": [
 		{
 			"matches":[
 			"https://soundcloud.com/stream*"
 			],
-			"js": ["content.js"]
+			"js": ["angular.min.js", "jquery-1.12.1.js", "injected.js"]
 		}	
 
 	],
-	//Browser action, essentially defines what clicking on the popup icon will do.
 	"browser_action": {
 	
 		"default_icon": "icon.png",
@@ -22,8 +24,19 @@
 
 	"background": {
 		"scripts": ["background.js"]
+		//"persistent": false
+	},
+
+	"permissions": [
+	  "contextMenus"
+	],
+	"icons" : {
+		"64" : "icon.png",
+		"32" : "icon.png",
+		"16" : "icon.png",
+		"128" : "icon.png"
+
 	}
-	
-	
+
 	
 }
