@@ -1,6 +1,9 @@
 //injected js file
 alert("Welcome to the new and improved Soundcloud!")
-
+var btn = $(document.createElement("BUTTON"));
+var t = $(document.createTextNode("Good Button"));
+btn.appendChild(t);
+$( ".sound__footer g-all-transitions-300").append(btn);
 
 
 /*var $ = window.$.noConflict(true); // 

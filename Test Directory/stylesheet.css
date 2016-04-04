@@ -1,32 +1,37 @@
 
-body {
+body 
+{
 			margin: auto;
 			padding: 0px;
 			font-family: Arial, Helvetica, Sans-serif;
 			font-size: 24px;
 			background-color: black;
-		}
-.popupContainerDiv {
-<<<<<<< HEAD
+}
+
+.popupContainerDiv 
+{
 			width: 100px;
 			min-height: 100px;
 			max-height: 400px;
-=======
 			width: 500px;
 			min-height: 250px;
 			max-height: 750px;
->>>>>>> 88561a21ec7fc1897950e87e90443138833bf72a
-		}
-h1{
+}
+
+h1
+{
 	color:#ff3a00;
 	font-family:Verdana;
+
 }
-h3{
+h3
+{
 	color:#ff3a00;
 	font-family:Verdana;
 }
 
-.button {
+.button 
+{
    border: 2px solid #ffffff;
    background: #fafafa;
    background: -webkit-gradient(linear, left top, left bottom, from(#ff3c00), to(#fafafa));
@@ -48,8 +53,9 @@ h3{
    font-family: helvetica, serif;
    text-decoration: none;
    vertical-align: middle;
-   }
-.button:hover {
+}
+.button:hover 
+{
    border: 2px solid #ffffff;
    text-shadow: #1e4158 0 1px 0;
    background: #ffffff;
@@ -60,8 +66,9 @@ h3{
    background: -o-linear-gradient(top, #ff3c00, #ffffff);
    background-image: -ms-linear-gradient(top, #ff3c00 0%, #ffffff 100%);
    color: #fff;
-   }
-.button:active {
+}
+.button:active 
+{
    text-shadow: #1e4158 0 1px 0;
    border: 2px solid #ffffff;
    background: #ffffff;
@@ -72,17 +79,14 @@ h3{
    background: -o-linear-gradient(top, #ff3c00, #ffffff);
    background-image: -ms-linear-gradient(top, #ff3c00 0%, #ffffff 100%);
    color: #fff;
-   }
-img{
+}
+img
+{
 	border: 2px solid black;
 	vertical-align: center;
 	height: 150px;
-<<<<<<< HEAD
 	width: 200px;
-   }
-
-
-=======
-	width: auto;
 }
->>>>>>> 88561a21ec7fc1897950e87e90443138833bf72a
+
+
+

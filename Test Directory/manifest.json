@@ -3,6 +3,7 @@
 	"name": "SoundCloud Enhancement Suite",
 	"version": "0.1.1",
 	"manifest_version": 2,
+	"content_security_policy": "script-src 'self' https://connect.soundcloud.com/sdk/sdk-3.0.0.js https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js https://connect.soundcloud.com/sdk/flashAudio.swf; object-src 'self'",
 	"description": "Adds a couple much needed features to the SoundCloud website",
 	"web_accessible_resources": [
 		"toolbar.html"
@@ -28,7 +29,8 @@
 	},
 
 	"permissions": [
-	  "contextMenus"
+	  "contextMenus",
+	  "tabs", "https://soundcloud.com/stream*"
 	],
 	"icons" : {
 		"64" : "icon.png",
