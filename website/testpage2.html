@@ -73,7 +73,7 @@
 		   <iframe id="sc-widget" autoplay="true" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1848538&show_artwork=true"></iframe>
 		   <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 		   <script type="text/javascript">
-		   		var id = 0;
+		   		var id;
 				(function(){
 				  var widgetIframe = document.getElementById('sc-widget'),
 				      widget       = SC.Widget(widgetIframe),
@@ -86,17 +86,34 @@
 				        show_artwork: false
 				    });
 				  });
+				console.log(id);
 				});
 
 			}());
 			</script>
-		  <a class="glyphicon glyphicon-headphones" id="play" onclick="play()"></a>
+		  <a class="glyphicon glyphicon-volume-up" id="play" onclick="play()"></a>
 		  <script>
 		  </script>
+
 		</div> 
 		<div class="panel panel-default">
 		<div class="panel-heading">More Songs</div>
-		<div class="panel-body">
+
+		<script>
+		function showsounds(){
+		  	SC.get('/playlists/2050462').then(function(playlist) {
+		    	playlist.tracks.forEach(function(track){
+		    		$('#tracks').append(track.title, '<br>'); 
+		    	});
+		    	playlist.tracks.forEach(function(track){
+		    		var x = track.id;
+		    		console.log(x);
+		    	});
+			});
+		  }
+		</script>
+		<a class="glyphicon glyphicon-plus" id="showsounds" onclick="showsounds()"></a>
+
 		</div>
 </div>   
       </div>
