@@ -15,10 +15,11 @@ Test 1: Authentication
 -Procedure: Click on the "Connect" button, then sign in with your SoundCloud credentials.
 -Expected Outcome: A Popup window with a SoundCloud sign-in page should appear, the window should then close and an alert window will open greeting the user.
 
-Test 2:
--
-- 
+Test 2: 
+-Procedure: Click on the "Stream" page tab
+-Expected Outcome: An Embedded audio player should pop up, the player's controls should be fully functional.
 
 Test 3:
--
+-Procedure: Login and click on the plus icon under the audio player
+-Expected Outcome: An alert should appear displaying your user id (not an actual feature for the website but useful if you need your user id #)
 -
