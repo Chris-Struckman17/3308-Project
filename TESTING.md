@@ -9,7 +9,7 @@ Vision: "Music Made Better" Our website is a modification of the Soundcloud api 
 Automated Test: 
   Tool Used: Mocha-chai
   Link: https://mochajs.org/
-  We made a test file test.js where we created a case to test if our authentication popun actually alerts the client when they sign in. using this framework, we passed the test that we created with the screenshot shown.
+  We made a test file "test.js" where we created a case to test if our authentication popup actually alerts the client when they sign in. Using this framework, we passed the test that we created with the screenshot shown.
 
 User Acceptance Test:
 Test 1: Authentication
