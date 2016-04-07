@@ -1,7 +1,14 @@
 Part 3 - Testing
 
-Automated Test Tool: Mocha-chai
+Who: Victoria Velasquez (torivelasquez), Chris Struckman (Chris-Struckman17), John Welch (Jinjirow), Zach Brimlow (zbrimlow)
 
+Title: LitCloud
+
+Vision: "Music Made Better" Our website is a modification of the Soundcloud api that makes listening to music easier. Queuing songs is now possible to form temporary playlists with ease. Local files are now playable from soundcloud.
+
+Automated Test: 
+  Tool Used: Mocha-chai      // John: Add link to tool or explanation of how to run the automated test cases,
+                             // and copy of output showing results
 
 User Acceptance Test:
 Test 1: Authentication
@@ -11,3 +18,7 @@ Test 1: Authentication
 Test 2:
 -
 - 
+
+Test 3:
+-
+-
