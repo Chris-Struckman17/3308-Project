@@ -3,10 +3,11 @@
   <head>
     <title>LitCloud 2.0.1</title>
     <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
-    <script src="scripts.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="styles.css" >
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="scripts.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -16,63 +17,83 @@
   </head>
   <body>
   	<header>
-	  		<nav class="navbar navbar-inverse">
-			  <div class="container-fluid">
-			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      <a class="navbar-brand" href="testpagebootstrap.html">LitCloud 2.0.1</a>
-			    </div>
-
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav">
-			        <li><a href="testpage2.html">Stream</a></li>
-			        <li class="dropdown">
-			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-			          <ul class="dropdown-menu">
-			            <li><a href="#">Action</a></li>
-			            <li><a href="#">Another action</a></li>
-			            <li><a href="#">Something else here</a></li>
-			            <li role="separator" class="divider"></li>
-			            <li><a href="https://github.com/jinjirow/3308-Project/tree/master/website">Development</a></li>
-			          </ul>
-			        </li>
-			      </ul>
-			    </div><!-- /.navbar-collapse -->
-			  <div> 
-			      <img src="btn-connect-s.png"onclick="auth()"/>
-			  </div>
-			  </div><!-- /.container-fluid -->
-			</nav>
+  		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="testpagebootstrap.html">LitCloud 2.0.1</a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="testpage2.html">Stream</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="https://github.com/jinjirow/3308-Project/tree/master/website">Development</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  <div> 
+		      <img src="btn-connect-s.png"onclick="auth()"/>
+		  </div>
+		  </div><!-- /.container-fluid -->
+		</nav>
   	</header>
     <div class="container">
       <div class="row">
         <div class="panel panel-default">
 		  <div class="panel-heading">Stream</div>
-		   <iframe id="sc-widget" autoplay="true" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1848538&show_artwork=true"></iframe>
-		   <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
-		  
-		  <a class="glyphicon glyphicon-volume-up" id="play"></a>
+		  <iframe id="soundcloud_widget"
+	           src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/57809396&show_artwork=true&liking=false&sharing=false&auto_play=false"
+	           width="100%"
+	           height="200"
+	           frameborder="no">
+	      </iframe>
+		  <a class="glyphicon glyphicon-volume-up" id="play" onclick="nextsong()"></a>
 		  <script>
 
 		  </script>
-
 		</div> 
-		<div class="panel panel-default">
-		<div class="panel-heading">More Songs</div>
-		<a class="glyphicon glyphicon-plus" id="showsounds" onclick="showsounds()"></a>
-		</div>
-</div>   
-      </div>
-    </div>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="center-block" style="width:500px;background-color:ccc;">
+	    <div class="input-group">
+	      <span class="input-group-btn">
+	      <script>
+	      function search(){
+	      SC.initialize({
+			  client_id: '26e01e342431b86b0c8e6f8810eaf38d'
+		  });
+		  var genrename = document.getElementById('genre').value
+
+			// find all tracks with the genre 'punk' that have a tempo greater than 120 bpm.
+		  SC.get('/'+genrename, {
+			genres: 'dubstep', bpm: { from: 130 }
+		  }).then(function(tracks) {
+			console.log(genrename);
+		  });
+		  }
+	      </script>
+	        <button class="btn btn-default" type="button" onclick="search()">Search</button>
+	      </span>
+	      <input type="text" name="value" id="genre" class="form-control" placeholder="What do you want to hear?">
+	    </div><!-- /input-group -->
+	  </div><!-- /.col-lg-6 -->
+	</div><!-- /.row --> 
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
- 
   </body>
 </html>
