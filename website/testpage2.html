@@ -79,11 +79,12 @@
 		  });
 		  var genrename = document.getElementById('genre').value
 
+
 			// find all tracks with the genre 'punk' that have a tempo greater than 120 bpm.
-		  SC.get('/'+genrename, {
-			genres: 'dubstep', bpm: { from: 130 }
+		  SC.get('/tracks', {
+			genres: genrename, bpm: { from: 130 }
 		  }).then(function(tracks) {
-			console.log(genrename);
+			console.log(tracks);
 		  });
 		  }
 	      </script>
