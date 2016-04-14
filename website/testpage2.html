@@ -84,8 +84,13 @@
 		  SC.get('/tracks', {
 			genres: genrename, bpm: { from: 130 }
 		  }).then(function(tracks) {
-			console.log(tracks);
+		  	$.each( tracks, function( index, track) {
+		  	  $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
+		  	  console.log(track.title);
+		  	});
 		  });
+		  
+
 		  }
 	      </script>
 	        <button class="btn btn-default" type="button" onclick="search()">Search</button>
@@ -94,6 +99,9 @@
 	    </div><!-- /input-group -->
 	  </div><!-- /.col-lg-6 -->
 	</div><!-- /.row --> 
+	<ul id="results">
+
+	</ul>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
   </body>
