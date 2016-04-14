@@ -28,15 +28,10 @@
 }
 */
 
-
-function getuser_id(){
-	var url = "https://soundcloud.com/jinjirow"
-	SC.get('/resolve', {
-	}, function(user) {
-		console.log(user.id);
-	});
-
+function songbutton(){
+	alert('you pressed the button');
 }
+
 
 
 function showsounds(){
@@ -63,6 +58,7 @@ function auth(){
 	  return SC.get('/me');
 	}).then(function(me) {
 	  alert('Hello, ' + me.username);
+
 	});
 }
 

@@ -9,3 +9,8 @@
 .darkestBG {
 	background: #333;
 }
+
+#results {
+	left: 10px;
+    float: left;
+}

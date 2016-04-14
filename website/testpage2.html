@@ -43,6 +43,7 @@
 		            <li><a href="https://github.com/jinjirow/3308-Project/tree/master/website">Development</a></li>
 		          </ul>
 		        </li>
+		        <ul id="username"></ul>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  <div> 
@@ -56,7 +57,7 @@
         <div class="panel panel-default">
 		  <div class="panel-heading">Stream</div>
 		  <iframe id="soundcloud_widget"
-	           src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/57809396&show_artwork=true&liking=false&sharing=false&auto_play=false"
+	           src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/62760389&show_artwork=true&liking=false&sharing=false&auto_play=false"
 	           width="100%"
 	           height="200"
 	           frameborder="no">
@@ -84,9 +85,10 @@
 		  SC.get('/tracks', {
 			genres: genrename, bpm: { from: 130 }
 		  }).then(function(tracks) {
+		  	console.log(tracks);
 		  	$.each( tracks, function( index, track) {
-		  	  $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
-		  	  console.log(track.title);
+		  	  $('#results').append($('<button class="btn btn-default" type="button" onclick = "songbutton()">Play</button>').html(track.title + ' - ' + track.genre));
+		  	  $('#results').append('<br>');
 		  	});
 		  });
 		  
@@ -99,9 +101,8 @@
 	    </div><!-- /input-group -->
 	  </div><!-- /.col-lg-6 -->
 	</div><!-- /.row --> 
-	<ul id="results">
-
-	</ul>
+	<ul id="results"></ul>
+	<ul id="username"></ul>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
   </body>
