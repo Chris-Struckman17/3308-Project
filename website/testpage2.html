@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" >
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
     <script src="scripts.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -56,16 +57,7 @@
       <div class="row">
         <div class="panel panel-default">
 		  <div class="panel-heading">Stream</div>
-		  <iframe id="soundcloud_widget"
-	           src="http://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/62760389&show_artwork=true&liking=false&sharing=false&auto_play=false"
-	           width="100%"
-	           height="200"
-	           frameborder="no">
-	      </iframe>
-		  <a class="glyphicon glyphicon-volume-up" id="play" onclick="nextsong()"></a>
-		  <script>
-
-		  </script>
+		  <ul id="playerctrl"></ul>
 		</div> 
 	  </div>
 	</div>
@@ -73,28 +65,6 @@
 	  <div class="center-block" style="width:500px;background-color:ccc;">
 	    <div class="input-group">
 	      <span class="input-group-btn">
-	      <script>
-	      function search(){
-	      SC.initialize({
-			  client_id: '26e01e342431b86b0c8e6f8810eaf38d'
-		  });
-		  var genrename = document.getElementById('genre').value
-
-
-			// find all tracks with the genre 'punk' that have a tempo greater than 120 bpm.
-		  SC.get('/tracks', {
-			genres: genrename, bpm: { from: 130 }
-		  }).then(function(tracks) {
-		  	console.log(tracks);
-		  	$.each( tracks, function( index, track) {
-		  	  $('#results').append($('<button class="btn btn-default" type="button" onclick = "songbutton()">Play</button>').html(track.title + ' - ' + track.genre));
-		  	  $('#results').append('<br>');
-		  	});
-		  });
-		  
-
-		  }
-	      </script>
 	        <button class="btn btn-default" type="button" onclick="search()">Search</button>
 	      </span>
 	      <input type="text" name="value" id="genre" class="form-control" placeholder="What do you want to hear?">

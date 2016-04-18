@@ -27,11 +27,35 @@
 	});
 }
 */
+var songarray = [];
+var i = 0;
+var songname;
 
-function songbutton(){
-	alert('you pressed the button');
+ 
+function search(){
+    SC.initialize({
+	    client_id: '26e01e342431b86b0c8e6f8810eaf38d'
+    });
+    var genrename = document.getElementById('genre').value
+    SC.get('/tracks', { 
+	  genres: genrename, bpm: { from: 130 }
+    }).then(function(tracks) { 
+  	  console.log(tracks);
+  	  $.each( tracks, function( index, track) { //loops through track objects and appends each result to a button 
+  	    $('#results').append($('<button class="btn btn-default" type="button" onclick = "songbutton()">Play </button>').html(track.title));
+  	    $('#results').append('<br>');
+  	    var songid = track.id;
+  	    songarray[i++] = songid;
+  	    console.log(songarray[0]);
+  	  });
+    });
+  
+
 }
 
+function songbutton(){
+	$('#playerctrl').append($('<iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + songarray[0] + '&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>'));
+}
 
 
 function showsounds(){
@@ -57,7 +81,9 @@ function auth(){
 	SC.connect().then(function() {
 	  return SC.get('/me');
 	}).then(function(me) {
-	  alert('Hello, ' + me.username);
+	  $('#userpanel').append($('<div class="jumbotron"><h1>Hello, ' + me.username + '</h1></div>'));
+	  $('#userpanel').append($('<div class="container"><div class="row"><div class="panel panel-default"><div class="panel-heading">Your Account</div><img src="' + me.avatar_url +'"></img></div></div></div>'));
+	  
 
 	});
 }
