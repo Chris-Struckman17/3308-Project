@@ -46,7 +46,7 @@ function search(){
   	    var songid = track.id;
   	    songarray[i++] = songid;
   	    console.log(songarray[0]);
-  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton()">Play </button>').html(track.title));
+  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton('+track.id+')">Play </button>').html(track.title));
   	    $('#results').append('<br>');
   	  });
     });
@@ -54,8 +54,8 @@ function search(){
 
 }
 
-function songbutton(){
-	$('#playerctrl').append($('<iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + songarray[0] + '&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>'));
+function songbutton(trackid){
+	$('#playerctrl').append($('<iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + trackid + '&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>'));
 }
 
 
