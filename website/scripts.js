@@ -42,11 +42,12 @@ function search(){
     }).then(function(tracks) { 
   	  console.log(tracks);
   	  $.each( tracks, function( index, track) { //loops through track objects and appends each result to a button 
-  	    $('#results').append($('<button class="btn btn-default" type="button" onclick = "songbutton()">Play </button>').html(track.title));
-  	    $('#results').append('<br>');
+  	    console.log(i);
   	    var songid = track.id;
   	    songarray[i++] = songid;
   	    console.log(songarray[0]);
+  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton()">Play </button>').html(track.title));
+  	    $('#results').append('<br>');
   	  });
     });
   
@@ -81,19 +82,10 @@ function auth(){
 	SC.connect().then(function() {
 	  return SC.get('/me');
 	}).then(function(me) {
-	  $('#userpanel').append($('<div class="jumbotron"><h1>Hello, ' + me.username + '</h1></div>'));
-	  $('#userpanel').append($('<div class="container"><div class="row"><div class="panel panel-default"><div class="panel-heading">Your Account</div><img src="' + me.avatar_url +'"></img></div></div></div>'));
-	  
-
+	  $('#userpanel').append($('<h1>Hello, ' + me.username + '</h1>'));
+	  $('#userpanel').append($('<div class="container"><div class="row"><div class="panel panel-default"><div class="panel-heading">Your Account</div><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/171892596&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div></div></div>'));
 	});
 }
 
-function addElement () {
-	var newDiv = document.createElement("div");
-	var newContent = document.createTextNode("U Are");
-	newDiv.appendChild(newContent);
 
-	var currentDiv = document.getElementById("div1");
-	document.body.insertBefore(newDiv, currentDiv);
-}
 
