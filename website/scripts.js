@@ -27,6 +27,7 @@
 	});
 }
 */
+
 function getUserData(){
 SC.initialize({
 	  client_id: '26e01e342431b86b0c8e6f8810eaf38d',
@@ -65,11 +66,13 @@ $('#userpanel').append($('<h5>Go follow someone to get more music!</h5>'));
 }
 
 
+
 var songarray = [];
 var i = 0;
 var songname;
 
- 
+
+
 function search(){
     SC.initialize({
 	    client_id: '26e01e342431b86b0c8e6f8810eaf38d'
@@ -84,8 +87,7 @@ function search(){
   	    var songid = track.id;
   	    songarray[i++] = songid;
   	    console.log(songarray[0]);
-  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton('+track.id+')">Play </button>').html(track.title));
-  	    $('#playerctrl').html($('<iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + songarray[0] + '&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>'));
+  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton('+track.id+')"></button>').html(track.title));
   	    $('#results').append('<br>');
   	  });
     });
@@ -121,9 +123,8 @@ function auth(){
 	SC.connect().then(function() {
 	  return SC.get('/me');
 	}).then(function(me) {
-	  $('#userpanel').append($('<h1>Hello, ' + me.username + '</h1>'));
 
-	  $('#userpanel').append($('<h1>You Have, ' + me.followers_count + ' followers!</h1>'));
+	  $('#userpanel').append($('<h1>Hello, ' + me.username + '</h1>'));
 	  $('#userpanel').append($('<div class="container"><div class="row"><div class="panel panel-default"><div class="panel-heading">Your Account</div><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/171892596&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div></div></div>'));
 	});
 }
