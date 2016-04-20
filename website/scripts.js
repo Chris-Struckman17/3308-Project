@@ -27,6 +27,44 @@
 	});
 }
 */
+function getUserData(){
+SC.initialize({
+	  client_id: '26e01e342431b86b0c8e6f8810eaf38d',
+	  redirect_uri: 'http://localhost:8000/website/callback.html'
+	});
+	SC.connect().then(function() {
+	  return SC.get('/me');
+	}).then(function(me) {
+	  $('#userpanel').append($('<h1>Hello '+ me.first_name+'!</h1>'));
+	  $('#userpanel').append($('<h1>You have '+ me.followers_count+' followers!</h1>'));
+	  if(me.followers_count < 5){
+	  	$('#userpanel').append($('<h5>You must have horrible Taste in music! Check out our Website for help!</h5>'));
+	  }else if(5 < me.followers_count <100){
+	  	$('#userpanel').append($('<h5>You have decent taste to have that many followers!</h5>'));
+	  }
+	  else{
+	  		$('#userpanel').append($('<h5>Why are you here, you are a musical god!</h5>'));
+	  	}
+	  
+	  if(me.following_count>0){
+	  $('#userpanel').append($('<h1>You are currently following '+ me.following_count+' person(s)!</h1>'));
+	}else{$('#userpanel').append($('<h1>You are currently following no one!</h1>'));
+$('#userpanel').append($('<h5>Go follow someone to get more music!</h5>'));
+}
+	  $('#userpanel').append($('<h1>You are from '+ me.country+'!</h1>'));
+	  if(me.country!="United States"){
+	  	$('#userpanel').append($('<h5>Hello From the United States!</h5>'));
+	  }
+	  $('#userpanel').append($('<h1>You currently have '+ me.track_count+' tracks at your disposal!</h1>'));
+	  $('#userpanel').append($('<h1>You currently have '+ me.playlist_count+' playlists attached to your account!</h1>'));
+
+
+	});
+	
+
+}
+
+
 var songarray = [];
 var i = 0;
 var songname;
@@ -84,9 +122,11 @@ function auth(){
 	  return SC.get('/me');
 	}).then(function(me) {
 	  $('#userpanel').append($('<h1>Hello, ' + me.username + '</h1>'));
+
+	  $('#userpanel').append($('<h1>You Have, ' + me.followers_count + ' followers!</h1>'));
 	  $('#userpanel').append($('<div class="container"><div class="row"><div class="panel panel-default"><div class="panel-heading">Your Account</div><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/171892596&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div></div></div>'));
 	});
 }
-
+ 
 
 
