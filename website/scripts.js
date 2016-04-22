@@ -7,7 +7,7 @@
 	  widget.toggle();
 	};
 });)
-*/
+/*
 
 
 /*function nextsong(){
@@ -70,6 +70,7 @@ $('#userpanel').append($('<h5>Go follow someone to get more music!</h5>'));
 var songarray = [];
 var i = 0;
 var songname;
+var queueid;
 
 
 
@@ -84,10 +85,11 @@ function search(){
   	  console.log(tracks);
   	  $.each( tracks, function( index, track) { //loops through track objects and appends each result to a button 
   	    console.log(i);
-  	    var songid = track.id;
+  	    var songid = track.title;
   	    songarray[i++] = songid;
   	    console.log(songarray[0]);
-  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton('+track.id+')"></button>').html(track.title));
+  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton(\'' + track.id + '\')"></button>').html(track.title));
+  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "queuebutton(\'' + track.id + '\',\'' + track.title + '\')"></button>').html('Queue'));
   	    $('#results').append('<br>');
   	  });
     });
@@ -95,8 +97,22 @@ function search(){
 
 }
 
-function songbutton(trackid){	
-	$('#playerctrl').html($('<iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + trackid + '&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>'));
+function queuebutton(nextsong, tracktitle){
+	queueid = nextsong;
+	$('#queue').html('<div class ="alert alert-success" role="alert">Up Next:'+tracktitle+'<div>');
+	console.log(tracktitle);
+	var newSoundUrl = "http://api.soundcloud.com/tracks/"+queueid;
+	var iframe = document.querySelector('#sc-widget');
+	var widget = SC.Widget(iframe);
+	widget.bind(SC.Widget.Events.FINISH, function() {
+		widget.load(newSoundUrl);
+		widget.play();
+	});
+}
+
+
+function songbutton(trackid){
+	$('#playerctrl').html($('<iframe id ="sc-widget" width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + trackid + '&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>'));
 }
 
 

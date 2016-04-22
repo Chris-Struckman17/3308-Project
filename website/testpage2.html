@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Sound++</title>
+    <title>Sound&#x1F50C</title>
     <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
     <!-- Latest compiled and minified CSS -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -13,7 +13,7 @@
   </head>
   <body>
   	<header>
-  		<nav class="navbar navbar-inverse">
+  		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -23,13 +23,12 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="testpagebootstrap.html">Sound++</a>
+		      <a class="navbar-brand" href="testpagebootstrap.html">Sound&#x1F50C</a>
 		    </div>
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
 		        <li><a href="testpage2.html">Stream</a></li>
-		        <li><a href="#" onclick="auth()">Connect</a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 		          <ul class="dropdown-menu">
@@ -41,6 +40,9 @@
 		          </ul>
 		        </li>
 		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#" onclick="auth()">Connect</a></li>
+		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
@@ -50,9 +52,11 @@
         <div class="panel panel-default">
 		  <div class="panel-heading">Stream</div>
 		  <ul id="playerctrl"></ul>
+		  <pre><code id="widget"></code></pre>
 		</div> 
 	  </div>
 	</div>
+	<ul id="queue"></ul>
 	<div class="row">
 	  <div class="center-block" style="width:500px;background-color:ccc;">
 	    <div class="input-group">
