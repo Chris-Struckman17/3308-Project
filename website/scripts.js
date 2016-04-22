@@ -106,7 +106,9 @@ function queuebutton(nextsong, tracktitle){
 	var widget = SC.Widget(iframe);
 	widget.bind(SC.Widget.Events.FINISH, function() {
 		widget.load(newSoundUrl);
-		widget.play();
+		widget.bind(SC.Widget.Events.READY, function() {
+			widget.play();
+		})
 	});
 }
 
