@@ -1,32 +1,3 @@
-/*$(document).ready(function () {
-	var widget
-    widget.bind(SC.Widget.Events.READY, function() {
-	  console.log('Ready...');
-	});
-	$('button').click(function() {
-	  widget.toggle();
-	};
-});)
-/*
-
-
-/*function nextsong(){
-	  var id;
-	  console.log(id);
-	  var widgetIframe = document.getElementById('sc-widget'),
-	      widget       = SC.Widget(widgetIframe),
-	      newSoundUrl = 'http://api.soundcloud.com/tracks/' + id;
-
-	  widget.bind(SC.Widget.Events.READY, function() {
-	    // load new widget
-	    widget.bind(SC.Widget.Events.FINISH, function() {
-	      widget.load(newSoundUrl, {
-	        show_artwork: false
-	    });
-	  });
-	});
-}
-*/
 
 function getUserData(){
 SC.initialize({
@@ -89,7 +60,7 @@ function search(){
   	    songarray[i++] = songid;
   	    console.log(songarray[0]);
   	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton(\'' + track.id + '\')"></button>').html(track.title));
-  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "queuebutton(\'' + track.id + '\',\'' + track.title + '\')"></button>').html('Queue'));
+  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "queuebutton(\'' + track.id + '\',\'' + track.title + '\')"></button>').html('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'));
   	    $('#results').append('<br>');
   	  });
     });
