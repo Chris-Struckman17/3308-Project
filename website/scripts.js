@@ -42,6 +42,8 @@ var songarray = [];
 var i = 0;
 var songname;
 var queueid;
+var favarray = [];
+var favid = [];
 
 
 
@@ -59,6 +61,7 @@ function search(){
   	    var songid = track.title;
   	    songarray[i++] = songid;
   	    console.log(songarray[0]);
+  		$('#results').append($('<img class ="img" src="' +track.artwork_url+ '"></img>').html(''));
   	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton(\'' + track.id + '\')"></button>').html(track.title));
   	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "queuebutton(\'' + track.id + '\',\'' + track.title + '\')"></button>').html('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'));
   	    $('#results').append('<br>');
@@ -70,7 +73,7 @@ function search(){
 
 function queuebutton(nextsong, tracktitle){
 	queueid = nextsong;
-	$('#queue').html('<div class ="alert alert-success" role="alert">Up Next:'+tracktitle+'<div>');
+	$('#queue').html('<div class ="alert alert-info" role="alert">Up Next: '+tracktitle+'<div>');
 	console.log(tracktitle);
 	var newSoundUrl = "http://api.soundcloud.com/tracks/"+queueid;
 	var iframe = document.querySelector('#sc-widget');
@@ -84,9 +87,12 @@ function queuebutton(nextsong, tracktitle){
 }
 
 
+
+
 function songbutton(trackid){
 	$('#playerctrl').html($('<iframe id ="sc-widget" width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + trackid + '&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>'));
 }
+
 
 
 function showsounds(){
@@ -101,6 +107,18 @@ function showsounds(){
 	});
 }
 
+function getfavorites(){
+	$('#likebutton').remove();
+	SC.get('/me/favorites').then(function(tracks){
+		console.log(tracks);
+		$.each( tracks, function( index, track) {
+			$('#likes').append($('<img class ="img" src="' +track.artwork_url+ '"></img>').html(''));
+			$('#likes').append($('<button class="btn btn-clean" type="button" onclick = "songbutton(\'' + track.id + '\')"></button>').html(track.title));
+			$('#likes').append($('<button class="btn btn-clean" type="button" onclick = "queuebutton(\'' + track.id + '\',\'' + track.title + '\')"></button>').html('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'));
+	 	    $('#likes').append('<br>');
+		});
+	});
+}
 
 function auth(){
 	SC.initialize({
@@ -114,7 +132,7 @@ function auth(){
 	}).then(function(me) {
 
 	  $('#userpanel').append($('<h1>Hello, ' + me.username + '</h1>'));
-	  $('#userpanel').append($('<div class="container"><div class="row"><div class="panel panel-default"><div class="panel-heading">Your Account</div><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/171892596&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div></div></div>'));
+	  $('#likebutton').append($('<button class="btn btn-clean" type="button" onclick = "getfavorites()"></button>').html('Get Likes'));
 	});
 }
  
