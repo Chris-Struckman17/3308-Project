@@ -42,8 +42,7 @@ var songarray = [];
 var i = 0;
 var songname;
 var queueid;
-var favarray = [];
-var favid = [];
+
 
 
 
@@ -109,6 +108,7 @@ function showsounds(){
 
 function getfavorites(){
 	$('#likebutton').remove();
+	$('#greeting').remove();
 	SC.get('/me/favorites').then(function(tracks){
 		console.log(tracks);
 		$.each( tracks, function( index, track) {
@@ -131,9 +131,10 @@ function auth(){
 	  return SC.get('/me');
 	}).then(function(me) {
 
-	  $('#userpanel').append($('<h1>Hello, ' + me.username + '</h1>'));
+	  $('#userpanel').append($('<h1 id ="greeting">Hello, ' + me.username + '</h1>'));
 	  $('#likebutton').append($('<button class="btn btn-clean" type="button" onclick = "getfavorites()"></button>').html('Get Likes'));
 	});
+	$('#init').remove();
 }
  
 
