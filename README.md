@@ -5,8 +5,6 @@ Title: SoundStorm
  
 A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). (this has been changed to be a website)
 
-Vision Statement: "Music Made Better" Our extention is a modification of the Soundcloud api that makes listening to music easier. Queuing songs is now possible to form temporary playlists with ease. Local files are now playable from soundcloud. 
- As a music enthusiast I want complete control of my songs so that I can optimize my audio listening experience.
 =======
 Title: SoundStorm (name pending)
 
