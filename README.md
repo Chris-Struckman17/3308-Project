@@ -41,11 +41,7 @@ Project Plan:
 
 
 
-How to load the Extension:
-
-1.) Go to the chrome extensions page and check the developer mode box. 
-you can visit this page by simply typing chrome://extensions/ in the url.
-2.) Click on "load unpacked extension" and load the Test Directory folder
-3.) The extension should show up if you open soundcloud and will display a short message indicating that this extension works only on soundcloud's page
+How to load the webpage: 
+-Start a python server on whatever
 
 
