@@ -42,8 +42,7 @@ var songarray = [];
 var i = 0;
 var songname;
 var queueid;
-var favarray = [];
-var favid = [];
+
 
 
 
@@ -134,6 +133,7 @@ function auth(){
 	  $('#userpanel').append($('<h1>Hello, ' + me.username + '</h1>'));
 	  $('#likebutton').append($('<button class="btn btn-clean" type="button" onclick = "getfavorites()"></button>').html('Get Likes'));
 	});
+	$('#init').remove();
 }
  
 
