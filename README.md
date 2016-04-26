@@ -2,9 +2,8 @@ Who: John Welch (Jinjirow),Chris Struckman(Chris-Struckman17), Victoria Velasque
 
 
 Title: SoundStorm
-
-Description (Some of our ideas): A simple game. (looked at the monopoly code, didn't look too bad to program actually.) Some sort of iphone app (If we wanted to go down that road)[iphone app, swift language]. Some sort of audio application, plays music and other cool stuff (I sort of know how to program those as of now using JUCE) [c++], A webpage that takes an audio file and plays it along with visuals that repsond to the frequency of the sound.
-A simple, mp3 player application with audio filters and visualizer capabilities. A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). 
+ 
+A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). (this has been changed to be a website)
 
 Vision Statement: "Music Made Better" Our extention is a modification of the Soundcloud api that makes listening to music easier. Queuing songs is now possible to form temporary playlists with ease. Local files are now playable from soundcloud. 
  As a music enthusiast I want complete control of my songs so that I can optimize my audio listening experience.
