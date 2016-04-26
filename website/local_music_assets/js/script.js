@@ -1,6 +1,7 @@
 
 var allTracks = [],		// An array for all the files loaded in the track
 	playlist = [], 		// An array for the current playlist
+	tempPlaylist = [],	// A helper array to display current track in playlist
 	i = 0, 				// The number of the current track
 	shuffle = false,	// Shuffle flag
 	repeat = 0,			// Repeat flag
@@ -219,7 +220,13 @@ wavesurfer.on('ready', function () {
 
 		// Set cover art.
 
-		$('#cover-art-big').attr('src', url("pexels-photo.jpg"));
+		if(playlist[i].picture == 'local_music_assets/img/default_album_art.png'){
+			$('#cover-art-big').css("background", "");
+		}
+		else{
+			$('#cover-art-big').css("background-image", "url("+ playlist[i].picture +")").css("background-repeat", "no-repeat").css("background-position", "center");
+		}
+		//$('#cover-art-big').attr('src', url("pexels-photo.jpg"));
 
 		$('#cover-art-small').attr('src', playlist[i].picture);
 
@@ -242,7 +249,14 @@ wavesurfer.on('ready', function () {
 		});
 		playlist[i].playing = true;
 
-
+		if(tempPlaylist.length){
+			// highlight the right track
+			renderTrackList(tempPlaylist);
+		}
+		else{
+			// highlight the according element from the .track array
+			$('.track').removeClass('active').eq(i).addClass('active');
+		}
 		
 	}
 
@@ -456,7 +470,8 @@ $('#playlist').on('click', function (e) {
 			var position,
 				track;
 
-
+			//if (true) {}if
+			
 			// Remove from allTracks
 			position = allTracks.indexOf(track);
 
@@ -493,7 +508,7 @@ $('#playlist').on('click', function (e) {
 				else{
 					wavesurfer.empty();
 					clearInterval(timer);
-					$('#cover-art-big').css("background", "");
+					$('#cover-art-big').attr('src', url("pexels-photo.jpg"));
 					$('#cover-art-small').attr('src', 'assets/img/default_album_art.png');
 					$('#expand-bar').addClass('hidden');
 					$('#track-desc').html('There are no tracks loaded in the player.');
