@@ -42,6 +42,7 @@ Project Plan:
 
 
 How to load the webpage: 
--Start a python server on whatever
+-Start a python server ("python -m SimpleHTTPServer")
+-load "testpagebootstrap.html" in your browser of choice (ex: localhost:8000/website/testpage2.html)
 
 
