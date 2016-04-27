@@ -5,8 +5,6 @@ Title: SoundStorm
  
 A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). (this has been changed to be a website)
 
-Vision Statement: "Music Made Better" Our extention is a modification of the Soundcloud api that makes listening to music easier. Queuing songs is now possible to form temporary playlists with ease. Local files are now playable from soundcloud. 
- As a music enthusiast I want complete control of my songs so that I can optimize my audio listening experience.
 =======
 Title: SoundStorm (name pending)
 
@@ -43,11 +41,8 @@ Project Plan:
 
 
 
-How to load the Extension:
-
-1.) Go to the chrome extensions page and check the developer mode box. 
-you can visit this page by simply typing chrome://extensions/ in the url.
-2.) Click on "load unpacked extension" and load the Test Directory folder
-3.) The extension should show up if you open soundcloud and will display a short message indicating that this extension works only on soundcloud's page
+How to load the webpage: 
+-Start a python server ("python -m SimpleHTTPServer")
+-load "testpagebootstrap.html" in your browser of choice (ex: localhost:8000/website/testpage2.html)
 
 
