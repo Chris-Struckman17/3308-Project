@@ -3,7 +3,7 @@ python -m SimpleHTTPServer
 
 Then use this local host on chrome to the address:
 
-http://localhost:8000/website/testpage2.html
+http://localhost:8000/website/testpagebootstrap.html
 
 This will get you to the start up page.
 Have FUN!
