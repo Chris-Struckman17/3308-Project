@@ -1,11 +1,6 @@
 Who: John Welch (Jinjirow),Chris Struckman(Chris-Struckman17), Victoria Velasquez (torivelasquez), Zach Brimlow (zbrimlow)
 
 
-Title: SoundStorm
- 
-A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). (this has been changed to be a website)
-
-=======
 Title: SoundStorm (now sound++)
 
 Description: A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). 
