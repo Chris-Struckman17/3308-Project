@@ -1,3 +1,34 @@
+var songarray = [];
+var i = 0;
+var songname;
+var queueid;
+
+//created an array to test the search and queue function
+
+
+function search(){
+    SC.initialize({
+	    client_id: '26e01e342431b86b0c8e6f8810eaf38d'
+    });
+    var genrename = document.getElementById('genre').value
+    SC.get('/tracks', { 
+	  genres: genrename, bpm: { from: 130 }
+    }).then(function(tracks) { 
+  	  console.log(tracks);
+  	  $.each( tracks, function( index, track) { //performs a get request with a user specified genre in /tracks,                                            
+  	    console.log(i);  						// appends each result to a group of buttons
+  	    var songid = track.title;
+  	    songarray[i++] = songid;
+  	    console.log(songarray[0]);
+  		$('#results').append($('<img class ="img" src="' +track.artwork_url+ '"></img>').html(''));
+  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton(\'' + track.id + '\')"></button>').html(track.title));
+  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "queuebutton(\'' + track.id + '\',\'' + track.title + '\')"></button>').html('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'));
+  	    $('#results').append('<br>');
+  	  });
+    });
+  
+
+}
 
 function getUserData(){
 SC.initialize({
@@ -37,38 +68,6 @@ $('#userpanel').append($('<h5>Go follow someone to get more music!</h5>'));
 }
 
 
-
-var songarray = [];
-var i = 0;
-var songname;
-var queueid;
-
-//created an array to test the search and queue function
-
-
-function search(){
-    SC.initialize({
-	    client_id: '26e01e342431b86b0c8e6f8810eaf38d'
-    });
-    var genrename = document.getElementById('genre').value
-    SC.get('/tracks', { 
-	  genres: genrename, bpm: { from: 130 }
-    }).then(function(tracks) { 
-  	  console.log(tracks);
-  	  $.each( tracks, function( index, track) { //performs a get request with a user specified genre in /tracks,                                            
-  	    console.log(i);  						// appends each result to a group of buttons
-  	    var songid = track.title;
-  	    songarray[i++] = songid;
-  	    console.log(songarray[0]);
-  		$('#results').append($('<img class ="img" src="' +track.artwork_url+ '"></img>').html(''));
-  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "songbutton(\'' + track.id + '\')"></button>').html(track.title));
-  	    $('#results').append($('<button class="btn btn-clean" type="button" onclick = "queuebutton(\'' + track.id + '\',\'' + track.title + '\')"></button>').html('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>'));
-  	    $('#results').append('<br>');
-  	  });
-    });
-  
-
-}
 //Queue button passes through the queued song's id so that it 
 //will play after the current song using the sc-widget's ".FINISH" method
 function queuebutton(nextsong, tracktitle){
