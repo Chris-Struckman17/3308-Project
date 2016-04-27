@@ -6,7 +6,7 @@ Title: SoundStorm
 A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). (this has been changed to be a website)
 
 =======
-Title: SoundStorm (name pending)
+Title: SoundStorm (now sound++)
 
 Description: A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). 
 
