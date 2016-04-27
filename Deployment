@@ -1,0 +1,9 @@
+In order to Deploy our website, you will to download our repository and run the following code in that directory:
+python -m SimpleHTTPServer
+
+Then use this local host on chrome to the address:
+
+http://localhost:8000/website/testpage2.html
+
+This will get you to the start up page.
+Have FUN!
