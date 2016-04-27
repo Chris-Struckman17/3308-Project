@@ -32,9 +32,9 @@ Project Plan: https://trello.com/b/tetDicAg/3308-project
 
 
 How to load our webpage: 
--in terminal, clone our repository and navigate to our project folder /3308-Project
--Start a python server ("python -m SimpleHTTPServer")
--load "testpagebootstrap.html" in your browser of choice (ex: localhost:8000/website/testpagebootstrap.html)
+1.) in terminal, clone our repository and navigate to our project folder /3308-Project
+2.) Start a python server ("python -m SimpleHTTPServer")
+3.) load "testpagebootstrap.html" in your browser of choice (ex: localhost:8000/website/testpagebootstrap.html)
 
 
 
