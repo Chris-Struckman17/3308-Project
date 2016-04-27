@@ -1,12 +1,7 @@
 Who: John Welch (Jinjirow),Chris Struckman(Chris-Struckman17), Victoria Velasquez (torivelasquez), Zach Brimlow (zbrimlow)
 
 
-Title: SoundStorm
- 
-A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). (this has been changed to be a website)
-
-=======
-Title: SoundStorm (name pending)
+Title: SoundStorm (now sound++)
 
 Description: A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). 
 
@@ -18,7 +13,7 @@ Motivation: To gain experience working with/modifying existing web programs and 
 Mitigation strategy: Delegate work evenly throughout the group such that everyone is working/improving on different aspects of the project (ie. One person works on the application's web functionality, another might work on the features.)
 
 Requirements
--Functional: 1.Extension should effectively add more features to the existing Soundcloud API.(8) 2.Specifically it should be able to play user specified songs without being in a playlist.(8) 3.It should also have the ablity to access a user's music (wherever that directory may be) and play songs from there as well as add these songs to playlists including songs that are streamed. (8)
+-Functional: 1.Extension should effectively add more features using the Soundcloud API.(8) 2.Specifically it should be able to play user specified songs without being in a playlist.(8) 3.It should also have the ablity to access a user's music (wherever that directory may be) and play songs from there as well as add these songs to playlists including songs that are streamed. (8)
 
 -Non-Functional: 4.Extension should not decrease performance of the original website. 
 
@@ -29,13 +24,10 @@ Methodolody: Agile Method
 Project Tracking: Trello (Link: https://trello.com/invite/b/tetDicAg/c1ab5c035a47bbcb0999261645111938/3308-project)
 
 
-Risks: Not much experience writing software with Javascript, CSS or HTTP. but we're definitely learning. 
+Risks: Not much experience writing software with Javascript, CSS or HTML. but we're definitely learning. 
 
 Project Plan: https://trello.com/b/tetDicAg/3308-project
 
-
-
-Risks: Not much experience writing software with these Javascript, CSS or HTTP. but we're definitely learning. 
 
 Project Plan: 
 
