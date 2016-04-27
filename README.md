@@ -1,11 +1,11 @@
 Who: John Welch (Jinjirow),Chris Struckman(Chris-Struckman17), Victoria Velasquez (torivelasquez), Zach Brimlow (zbrimlow)
 
 
-Title: SoundStorm (now sound++)
+Title: Sound++
 
-Description: A chrome extention that gives soundcloud many needed features such as queuing, sorting, visualization, access to local files (like spotify). 
+Description: A web app using the soundcloud api that effectively adds a working queue as well as a local file player. You may search for songs you want to hear off soundcloud or simply sign in and listen to your likes. 
 
-Vision Statement: "Music Made Better" Our extension is a modification of the Soundcloud api that makes listening to music easier and more enjoyable. Queuing songs is now possible to form temporary playlists with ease. Local files are now made acessible and can be put in playlists with streamed music.
+Vision Statement: "Music Made Better" Our app makes listening to music easier and more enjoyable. Queuing songs is now possible to form temporary playlists with ease. Local files are now made acessible allowing you to drag and drop mp3 files and listen with ease.
 
 
 Motivation: To gain experience working with/modifying existing web programs and creating our own chrome extensions using Java, CSS, and HTML. 
@@ -30,12 +30,11 @@ Risks: Not much experience writing software with Javascript, CSS or HTML. but we
 Project Plan: https://trello.com/b/tetDicAg/3308-project
 
 
-Project Plan: 
 
+How to load our webpage: 
+1.) in terminal, clone our repository and navigate to our project folder /3308-Project
+2.) Start a python server ("python -m SimpleHTTPServer")
+3.) load "testpagebootstrap.html" in your browser of choice (ex: localhost:8000/website/testpagebootstrap.html)
 
-
-How to load the webpage: 
--Start a python server ("python -m SimpleHTTPServer")
--load "testpagebootstrap.html" in your browser of choice (ex: localhost:8000/website/testpage2.html)
 
 
